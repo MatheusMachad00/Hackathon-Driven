@@ -68,6 +68,10 @@ button {
     align-items: center;
 }
 
+.weather span {
+    margin-bottom: 20px;
+}
+
 .weather p {
     font-size: 30px;
     font-weight: 500;
