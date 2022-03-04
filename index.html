@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Qual seu clima?</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=New+Rocker&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
+    <header>
+        <img src="img/header.jpg" alt="imagem header">
+        <div>
+            <span>Qual seu clima?</span>
+        </div>
+        <img class="img2" src="img/header.jpg" alt="imagem header">
+    </header>
+    <main>
+        <section>
+            <span>Diga a sua localização:</span>
+            <input type="text">
+            <button>Descubra seu clima!</button>
+            <div class="weather">
+                <p>O clima do seu local é: </p>
+                <p>29°C, chuvoso</p>
+            </div>
+        </section>
+    </main>
 </body>
+
+<script src="Scripts/script.js"></script>
+
 </html>

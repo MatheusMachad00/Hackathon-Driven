@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    background-color: rgb(218, 218, 218);
+}
+
+header {
+    font-family: 'Great Vibes', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1495FD;
+    width: 100vw;
+}
+
+header img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.img2 {
+    transform: scaleX(-1);
+}
+
+header div {
+    font-size: 70px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+section {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section span {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+section input {
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+    background-color: aqua;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.weather {
+    margin-top: 20px;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
