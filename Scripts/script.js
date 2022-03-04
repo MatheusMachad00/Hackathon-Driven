@@ -31,7 +31,7 @@ function userLocation (location){
     long = location.data[0].lon;
 }
 
-function autoLocation(){
+/* function autoLocation(){
     let location = confirm("Você deseja saber o clima de sua atual localização?");
     if (location){
         autoLocationAPI();
@@ -42,4 +42,12 @@ function autoLocationAPI(){
     let request = axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${userCity}&limit=1&appid=${API_KEY}`);
     request.then(userLocation);
     request.catch();
-}
+} */
+
+var input = document.getElementById("city");
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+    }
+});
