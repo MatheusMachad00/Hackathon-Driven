@@ -1,11 +1,14 @@
 /* Variáveis globais */
 const API_KEY = "9aed8b2c740636f0f6c9c48b422314c4"
-
+let lati, long;
 
 /* Funções */
 
-let request = axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=8&lon=34&appid=${API_KEY}`);
-request.then(generateHTML);
+function getYourWeather (){
+    let request = axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${long}&appid=${API_KEY}&lang=pt_br`);
+    request.then(generateHTML);
+    request.catch();
+}
 
 function generateHTML (answer){
     console.log(answer);
@@ -16,10 +19,14 @@ function generateHTML (answer){
     <img src="http://openweathermap.org/img/wn/${answer.data.weather[0].icon}@2x.png" alt="icon">`;
 }
 
-function temperatureConverter(answer) {
-    answer.data.main.temp
-    answer.data.main.temp = parseFloat(answer.data.main.temp);
-    document.getElementById("outputCelcius").innerHTML=answer.data.main.temp-273.15;
-    console.log()
+function getLocation (){
+    let userCity = document.getElementById("city").value;
+    let request = axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${userCity}&limit=1&appid=${API_KEY}`);
+    request.then(userLocation);
+    request.catch();
 }
 
+function userLocation (location){
+    lati = location.data[0].lat;
+    long = location.data[0].lon;
+}

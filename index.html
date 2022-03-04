@@ -23,9 +23,9 @@
     </header>
     <main>
         <section>
-            <span>Diga a sua localização:</span>
-            <input type="text">
-            <button>Descubra seu clima!</button>
+            <span>Diga a sua cidade:</span>
+            <input id="city" type="text" oninput="getLocation()">
+            <button onclick="getYourWeather()">Descubra seu clima!</button>
             <div class="weather">
                 <span>O clima do seu local é: </span>
             </div>
